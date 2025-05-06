@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - 3D Animation Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('tech bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(255, 255, 255);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #00b1d8;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* About Section */
+        #about {
+            padding: 120px 20px 50px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Profile Image */
+        #profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            position: absolute;
+            top: 150px;
+            right: 50px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Next Arrow Button */
+        #next-button {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: white;
+            background-color: #00b1d8;
+            border-radius: 50%;
+            padding: 10px 16px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+        }
+
+        #next-button:hover {
+            background-color: #008bb5;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My 3D Animation Portfolio</h1>
+        <nav>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="certificate.html">Certifications</a>
+            <a href="project.html">Projects</a>
+            <a href="contactt.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Profile Image -->
+    <img src="port image.jpg" alt="Profile Image" id="profile-image">
+
+    <!-- About Section -->
+    <div id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Sarjan, a passionate 3D Animator and Full-Stack Developer. I specialize in bringing creative visions to life through animation, modeling, and storytelling. My portfolio showcases my journey and expertise in the field of digital art and animation.</p>
+        <p>With experience in industry-standard tools like Blender, Maya, and Unreal Engine, I strive to create immersive and visually stunning animations. Explore my work and let's create something amazing together!</p>
+    </div>
+
+    <!-- Next Arrow Button -->
+    <a href="education.html" id="next-button" title="Go to Education">&#10132;</a>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My 3D Animation Portfolio</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background */
+        body {
+            background-image: url('phone.webp'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            ;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px; /* Increased gap between contact items */
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Contact Item */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            width: 500px;
+            justify-content: space-between;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+        /* Navigation Arrow Buttons */
+.nav-button {
+    position: fixed;
+    bottom: 80px;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #00b1d8;
+    border-radius: 50%;
+    padding: 10px 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 999;
+}
+
+.nav-button:hover {
+    background-color: #008bb5;
+    transform: scale(1.1);
+}
+
+/* Specific positions */
+#next-button {
+    right: 30px;
+}
+
+#previous-button {
+    left: 30px;
+}
+
+
+        /* Contact Images */
+        .contact-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            text-align: left;
+            font-size: 18px;
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        #home-button {
+    right: 30px;
+    font-size: 2.5rem;
+    background-color: #00b1d8;
+    border-radius: 50%;
+    padding: 10px 16px;
+    position: fixed;
+    bottom: 30px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 999;
+}
+
+#home-button:hover {
+    background-color: #008bb5;
+    transform: scale(1.1);
+}
+
+
+#home-button:hover {
+    background-color: #008bb5;
+    transform: scale(1.1);
+}
+
+
+
+        /* Contact Button */
+        .contact-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="contact-title">Get In Touch</h2>
+        <h2 class="contact-title">Get In Touch</h2>
+        <h2 class="contact-title">Get In Touch</h2>
+        <h2 class="contact-title">Get In Touch</h2>
+        <h2 class="contact-title">Get In Touch</h2>
+       
+        <var></var>
+
+        <!-- Contact Item 1 -->
+        <div class="contact-item">
+            <img src="mail.jpg" alt="Email" onerror="this.src='https://via.placeholder.com/100'">
+            <div class="contact-details">
+                <p><strong>John Doe</strong></p>
+                <p>Web Developer</p>
+            </div>
+            <button class="contact-button" onclick="window.location.href='mail.html'">Contact Me</button>
+        </div>
+
+        <!-- Contact Item 2 -->
+        <div class="contact-item">
+            <img src="git.jpg" alt="GitHub" onerror="this.src='https://via.placeholder.com/100'">
+            <div class="contact-details">
+                <p><strong>Jane Smith</strong></p>
+                <p>Graphic Designer</p>
+            </div>
+            <button class="contact-button" onclick="window.location.href='contact_form.html'">Contact Me</button>
+        </div>
+
+        <!-- Contact Item 3 -->
+        <div class="contact-item">
+            <img src="lin.png" alt="LinkedIn" onerror="this.src='https://via.placeholder.com/100'">
+            <div class="contact-details">
+                <p><strong>Mark Taylor</strong></p>
+                <p>SEO Specialist</p>
+            </div>
+            <button class="contact-button" onclick="window.location.href='contact_form.html'">Contact Me</button>
+        </div>
+
+        <!-- Contact Item 4 -->
+        <div class="contact-item">
+            <img src="insta.jpg" alt="Instagram" onerror="this.src='https://via.placeholder.com/100'">
+            <div class="contact-details">
+                <p><strong>Lisa Brown</strong></p>
+                <p>UI/UX Designer</p>
+            </div>
+            <button class="contact-button" onclick="window.location.href='contact_form.html'">Contact Me</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+    <!-- Left Arrow Button (Previous Page) -->
+<a href="anotherpage.html" id="previous-button" class="nav-button" title="Go to Another Page" style="transform: rotate(180deg);">
+    &#10132;
+</a>
+
+
+
+</body>
+</html>
