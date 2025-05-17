@@ -40,7 +40,6 @@
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
       width: 1500px;
-      
       margin: 0 auto;
     }
 
@@ -92,9 +91,16 @@
     }
 
     footer {
-      margin-top: 60px;
+      background-color: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
       font-size: 14px;
-      color: #ccc;
     }
 
     /* Navigation Arrows */
@@ -116,18 +122,6 @@
       background-color: #008bb5;
       transform: scale(1.1);
     }
- footer {
-  background-color: #000000;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: fixed; /* Ensures the footer stays at the bottom */
-  bottom: 0;
-  left: 0;
-  width: 100%; /* Spans the full width of the page */
-  z-index: 10; /* Makes sure it is above other elements */
-}
-
 
     #next-button { right: 30px; }
     #previous-button { left: 30px; }
@@ -146,8 +140,32 @@
     }
 
     @media (max-width: 480px) {
+      body {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+      }
+
+      h1 {
+        font-size: 2rem; /* Reduce font size */
+      }
+
       .certificates {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for better readability */
+        gap: 15px; /* Reduce the gap between items */
+      }
+
+      .certificate img {
+        width: 90%; /* Reduce image width slightly */
+        margin: 0 auto; /* Center align images */
+      }
+
+      .nav-button, #next-button {
+        font-size: 2rem; /* Adjust size of navigation buttons */
+        padding: 8px 12px; /* Reduce padding for smaller buttons */
+      }
+
+      footer {
+        font-size: 12px; /* Smaller font for footer */
+        padding: 10px; /* Reduce footer padding */
       }
     }
   </style>
@@ -170,7 +188,7 @@
       <img src="oracle1.jpg" alt="Sample 1" onclick="showPopup(this.src)">
     </div>
     <div class="certificate">
-      <img src="copilot.jpg" alt="Sample 2" onclick="showPopup(this.src)">
+      <img src="images/copilot.jpg" alt="Sample 2" onclick="showPopup(this.src)">
     </div>
     <div class="certificate">
       <img src="images/sample3.jpg" alt="Sample 3" onclick="showPopup(this.src)">
@@ -200,8 +218,8 @@
   </footer>
 
   <!-- Navigation -->
-  <a href="project.html" id="next-button" title="Next Page">&#10132;</a>
-  <a href="education.html" id="previous-button" class="nav-button" title="Previous Page" style="transform: rotate(180deg);">&#10132;</a>
+  <a href="contactt.html" id="next-button" title="Next Page">&#10132;</a>
+  <a href="project.html" id="previous-button" class="nav-button" title="Previous Page" style="transform: rotate(180deg);">&#10132;</a>
 
   <script>
     function showPopup(src) {
