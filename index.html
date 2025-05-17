@@ -1,166 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - 3D Animation Portfolio</title>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('tech bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: rgb(255, 255, 255);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MY Portfolio</title>
+  <link rel="icon" href="indexbg.jpg" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('indexbg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
 
-        /* Header Styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: #00b1d8;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #00b1d8;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;  
+      z-index: 1000;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #fff;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #000000;
+    }
 
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            gap: 20px;
-        }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #000000;
-            font-size: 1.2rem;
-        }
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.2rem;
+    }
 
-        nav a:hover {
-            color: #ffffff;
-        }
+    nav a:hover {
+      color: #fff;
+    }
 
-        /* About Section */
-        #about {
-            padding: 120px 20px 50px;
-            text-align: center;
-            flex-grow: 1;
-        }
+    #about {
+      padding: 150px 60px 50px;
+      text-align: left;
+      max-width: 800px;
+    }
 
-        #about h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+    #about p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 60px 0;
+    }
 
-        #about p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+    #profile-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      z-index: 10;
+    }
 
-        /* Profile Image */
-        #profile-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            position: absolute;
-            top: 150px;
-            right: 50px;
-        }
+    .download-btn {
+      position: absolute;
+      top: 400px;
+      right: 40px;
+      background-color: #00b1d8;
+      border-color: #fff;
+      border:2px;
+      color: #000000;
+      padding: 12px 20px;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      z-index: 20;
+    }
+    #profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 177, 216, 0.7);
+  animation: glow 2s infinite ease-in-out;
+}
 
-        /* Footer Styles */
-        footer {
-            background-color: #111;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.905);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.905);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.905);
+  }
+}
 
-        footer a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.1rem;
-        }
 
-        footer a:hover {
-            color: #ffffff;
-        }
+     footer {
+  background-color: #000000;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  position: fixed; /* Ensures the footer stays at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Spans the full width of the page */
+  z-index: 10; /* Makes sure it is above other elements */
+}
+    #next-button {
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      font-size: 2.5rem;
+      color: white;
+      background-color: #00b1d8;
+      border-radius: 50%;
+      padding: 10px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      z-index: 999;
+    }
 
-        /* Next Arrow Button */
-        #next-button {
-            position: fixed;
-            bottom: 80px;
-            right: 30px;
-            font-size: 2.5rem;
-            color: white;
-            background-color: #00b1d8;
-            border-radius: 50%;
-            padding: 10px 16px;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            z-index: 999;
-        }
+    #next-button:hover {
+      background-color: #008bb5;
+      transform: scale(1.1);
+    }
 
-        #next-button:hover {
-            background-color: #008bb5;
-            transform: scale(1.1);
-        }
-    </style>
+    .cursor {
+      display: inline-block;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      from, to { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* Media Queries */
+    @media (max-width: 1024px) {
+      #profile-image {
+        width: 250px;
+        height: 250px;
+        top: 90px;
+        right: 0;
+      }
+
+      .download-btn {
+        top: 360px;
+        right: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+
+      #about {
+        padding-top: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      #profile-image {
+        width: 200px;
+        height: 200px;
+        top: 100px;
+        right: 0;
+      }
+
+      .download-btn {
+        top: 320px;
+        right: 20px;
+        font-size: 0.9rem;
+        padding: 10px 16px;
+      }
+
+      #next-button {
+        bottom: 60px;
+        right: 20px;
+        font-size: 2rem;
+        padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+      }
+
+      #about p {
+        font-size: 1.3rem;
+      }
+
+      #profile-image {
+        width: 160px;
+        height: 160px;
+        top: 110px;
+        right: 0;
+      }
+
+      .download-btn {
+        top: 280px;
+        right: 15px;
+        font-size: 0.8rem;
+        padding: 8px 14px;
+      }
+
+      #next-button {
+        font-size: 1.7rem;
+        padding: 6px 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>My 3D Animation Portfolio</h1>
-        <nav>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="certificate.html">Certifications</a>
-            <a href="project.html">Projects</a>
-            <a href="contactt.html">Contact</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <h1>CODE-CREATE-CONQUER</h1>
+    <nav>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="certificate.html">Certifications</a>
+      <a href="project.html">Projects</a>
+      <a href="contactt.html">Contact</a>
+      <a href="#">.......</a>
+    </nav>
+  </header>
 
-    <!-- Profile Image -->
-    <img src="port image.jpg" alt="Profile Image" id="profile-image">
+  <!-- Profile Image -->
+  <img src="profile3.jpg" alt="Profile Image" id="profile-image" />
 
-    <!-- About Section -->
-    <div id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Sarjan, a passionate 3D Animator and Full-Stack Developer. I specialize in bringing creative visions to life through animation, modeling, and storytelling. My portfolio showcases my journey and expertise in the field of digital art and animation.</p>
-        <p>With experience in industry-standard tools like Blender, Maya, and Unreal Engine, I strive to create immersive and visually stunning animations. Explore my work and let's create something amazing together!</p>
-    </div>
+  <!-- Download Resume Button -->
+  <a href="images/resume.pdf" download class="download-btn">📄 Download Resume</a>
 
-    <!-- Next Arrow Button -->
-    <a href="education.html" id="next-button" title="Go to Education">&#10132;</a>
+  <!-- About Section with Typing Effect -->
+  <div id="about">
+    <div id="typing-text"></div>
+  </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 My 3D Animation Portfolio</p>
-    </footer>
+  <!-- Next Button -->
+  <a href="education.html" id="next-button" title="Go to Education">&#10132;</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My 3D Animation Portfolio</p>
+  </footer>
+
+  <!-- Typing Script -->
+  <script>
+    const sentences = [
+      "🚀 I am Sarjan",
+      "🚀 I’m currently pursuing B.Tech 2nd year.",
+      "🚀 I'm passionate about Full Stack Development.",
+      "🚀 I also love working on animation and creative design.",
+      "🚀 My dream is to be the CEO of my own tech company."
+    ];
+
+    const typingElement = document.getElementById("typing-text");
+    let currentSentence = 0;
+    let currentChar = 0;
+
+    function typeSentence() {
+      if (currentSentence < sentences.length) {
+        const currentText = sentences[currentSentence];
+        typingElement.innerHTML = sentences
+          .slice(0, currentSentence)
+          .map(s => `<p>${s}</p>`)
+          .join('') + `<p>${currentText.slice(0, currentChar)}<span class="cursor">|</span></p>`;
+
+        if (currentChar < currentText.length) {
+          currentChar++;
+          setTimeout(typeSentence, 15); // Typing speed
+        } else {
+          currentSentence++;
+          currentChar = 0;
+          setTimeout(typeSentence, 500); // Pause between sentences
+        }
+      }
+    }
+
+    typeSentence();
+  </script>
 
 </body>
 </html>
