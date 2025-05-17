@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Email Form</title>
-  <!-- Link to FontAwesome for the icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="r2.jpg" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: url('mailbg.jpg') no-repeat center center/cover; /* Set your background image */
+      background: url('mailbg.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      background-size: cover;
       background-attachment: fixed;
     }
 
     .form-container {
-      background: linear-gradient(135deg, #20aee2, #2dc0e4); /* Vibrant gradient */
+      background: linear-gradient(135deg, #20aee2, #2dc0e4);
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
       width: 300px;
-      transform: perspective(1000px) rotateY(10deg) rotateX(10deg); /* 3D effect */
+      transform: perspective(1000px) rotateY(10deg) rotateX(10deg);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .form-container:hover {
-      transform: perspective(1000px) rotateY(0deg) rotateX(0deg); /* Hover effect for more dynamic 3D interaction */
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
@@ -66,18 +66,16 @@
     }
 
     button {
-      background-color: #1be7dc; /* Vibrant button color */
+      background-color: #1be7dc;
       color: white;
-      border-radius: 8px;
       cursor: pointer;
-      border: none;
       font-weight: bold;
       transition: background-color 0.3s, transform 0.2s ease-in-out;
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
 
     button:hover {
-      background-color: #00f7ff; /* Darker shade for hover effect */
+      background-color: #00f7ff;
       transform: translateY(-5px);
       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
     }
@@ -87,78 +85,56 @@
       height: 120px;
     }
 
-    /* Home Icon - Bottom Right with Blue background */
-    .home-icon {
+    #home-button, .left-icon {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      font-size: 2rem;
+      width: 56px;
+      height: 56px;
       color: white;
-      background-color: #007bff; /* Blue background */
-      padding: 15px;
+      font-size: 28px;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
-      transition: background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      z-index: 999;
     }
 
-    .home-icon:hover {
-      background-color: #0056b3; /* Darker shade for hover effect */
-    }
-    /* Navigation Arrow Buttons */
-.nav-button {
-    position: fixed;
-    bottom: 80px;
-    font-size: 2.5rem;
-    color: white;
-    background-color: #00b1d8;
-    border-radius: 50%;
-    padding: 10px 16px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    z-index: 999;
-}
-
-.nav-button:hover {
-    background-color: #008bb5;
-    transform: scale(1.1);
-}
-
-/* Specific positions */
-#next-button {
-    right: 30px;
-}
-
-#previous-button {
-    left: 30px;
-}
-
-
-    /* Left Arrow Icon - Bottom Left */
-    .left-arrow {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      font-size: 2rem;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    #home-button {
+      right: 30px;
+      bottom: 30px;
+      background-color: #00a9d9;
     }
 
-    .left-arrow:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+    .left-icon {
+      left: 30px;
+      bottom: 30px;
+      background-color: #08aad6;
+    }
+
+    #home-button:hover, .left-icon:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 480px) {
+      #home-button, .left-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+      }
     }
   </style>
 
-  <!-- Load EmailJS SDK -->
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
-<body>
 
-  <!-- Form container -->
+<body>
   <div class="form-container">
     <h2>Contact Me</h2>
     <form id="emailForm">
@@ -169,33 +145,32 @@
     </form>
   </div>
 
-  <!-- Home Icon (Bottom Right) -->
-  <div class="home-icon" onclick="window.location.href='index.html';">
+  <div id="home-button" title="Go Home" onclick="window.location.href='index.html'">
     <i class="fas fa-home"></i>
   </div>
 
-  <!-- Left Arrow Icon (Bottom Left) -->
-  <div class="left-arrow" onclick="window.location.href='contactt.html';">
+  <div class="left-icon" title="Back to Contact" onclick="window.location.href='contactt.html'">
     <i class="fas fa-arrow-left"></i>
   </div>
 
   <script>
     // Initialize EmailJS with your Public Key
     (function() {
-      emailjs.init("MllVZGqvqh3tJX4y1"); // ✅ Your public key
+      emailjs.init("OcDs-aZ7Zo1Gz2qPJ"); // ✅ Replace with your actual public key
     })();
 
-    // Handle form submit
+    // Form submission handler
     document.getElementById("emailForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
       const params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
         message: document.getElementById("message").value,
       };
 
-      emailjs.send("service_e40i7vh", "template_630ozur", params) // ✅ Your service & template
+      // Replace with your real EmailJS Service ID and Template ID
+      emailjs.send("service_c53woxr","template_o5h7rsh")
         .then(function(response) {
           alert("✅ Email sent successfully!");
           document.getElementById("emailForm").reset();
@@ -204,11 +179,5 @@
         });
     });
   </script>
-  <!-- Left Arrow Button (Previous Page) -->
-<a href="anotherpage.html" id="previous-button" class="nav-button" title="Go to Another Page" style="transform: rotate(180deg);">
-  &#10132;
-</a>
-
-
 </body>
 </html>
