@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Certificates</title>
   <link rel="icon" href="r2.jpg" type="image/png">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('certbg.jpg');
+      background-image: url('goldenframe.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      color: #fff;
+      color: #ffffff;
       min-height: 100vh;
       padding: 50px 20px;
       text-align: center;
@@ -24,8 +28,10 @@
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0;
-      height: 100%; width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: -1;
     }
@@ -33,18 +39,32 @@
     h1 {
       font-size: 3rem;
       margin-bottom: 40px;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+      }
+      100% {
+        text-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 60px #ffffff;
+      }
     }
 
     .certificates {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* Updated to 3 columns */
       gap: 20px;
-      width: 1500px;
+      width: 100%;
+      max-width: 1200px; /* Optional: Limit the width */
       margin: 0 auto;
     }
 
     .certificate {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(0, 0, 0, 0);
       border-radius: 12px;
       padding: 10px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -65,9 +85,11 @@
     .popup {
       display: none;
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
       justify-content: center;
       align-items: center;
       z-index: 10000;
@@ -91,8 +113,10 @@
     }
 
     footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
       background-color: #000000;
-      color: white;
       padding: 20px;
       text-align: center;
       position: fixed;
@@ -100,7 +124,6 @@
       left: 0;
       width: 100%;
       z-index: 10;
-      font-size: 14px;
     }
 
     /* Navigation Arrows */
@@ -123,87 +146,60 @@
       transform: scale(1.1);
     }
 
-    #next-button { right: 30px; }
-    #previous-button { left: 30px; }
+    #next-button {
+      right: 30px;
+    }
+    #previous-button {
+      left: 30px;
+    }
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .certificates {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
       .certificates {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 480px) {
-      body {
-        padding: 20px 10px; /* Reduce padding for smaller screens */
-      }
-
-      h1 {
-        font-size: 2rem; /* Reduce font size */
-      }
-
+    @media (max-width: 768px) {
       .certificates {
-        grid-template-columns: 1fr; /* Single column for better readability */
-        gap: 15px; /* Reduce the gap between items */
-      }
-
-      .certificate img {
-        width: 90%; /* Reduce image width slightly */
-        margin: 0 auto; /* Center align images */
-      }
-
-      .nav-button, #next-button {
-        font-size: 2rem; /* Adjust size of navigation buttons */
-        padding: 8px 12px; /* Reduce padding for smaller buttons */
-      }
-
-      footer {
-        font-size: 12px; /* Smaller font for footer */
-        padding: 10px; /* Reduce footer padding */
+        grid-template-columns: repeat(1, 1fr);
       }
     }
   </style>
 </head>
 <body>
-
   <h1>My Certificates</h1>
 
   <div class="certificates">
     <div class="certificate">
-      <img src="certificate1.jpg" alt="Blockchain" onclick="showPopup(this.src)">
+      <h3>GENERATIVE AI</h3>
+      <img src="certificate1.jpg" alt="Generative AI" onclick="showPopup(this.src)">
+      <p>Issued by: <br> KEC College Erode Sengunthar</p>
     </div>
     <div class="certificate">
-      <img src="certificate2.jpg" alt="Java" onclick="showPopup(this.src)">
+      <h3>KEC HACKATHON</h3>
+      <img src="certificate2.jpg" alt="KEC Hackathon" onclick="showPopup(this.src)">
+      <p>Issued by: <br> KEC College Erode Sengunthar</p>
     </div>
     <div class="certificate">
-      <img src="certificate3.jpg" alt="Python" onclick="showPopup(this.src)">
+      <h3>SEC HACKATHON</h3>
+      <img src="certificate3.jpg" alt="SEC Hackathon" onclick="showPopup(this.src)">
+      <p>Issued by: <br> Shreedevi Engineering College</p>
     </div>
     <div class="certificate">
-      <img src="oracle1.jpg" alt="Sample 1" onclick="showPopup(this.src)">
+      <h3>APEX DEVELOPER</h3>
+      <img src="oracle1.jpg" alt="Apex Developer" onclick="showPopup(this.src)">
+      <p>Issued by: <br> Oracle University</p>
     </div>
     <div class="certificate">
-      <img src="copilot.jpg" alt="Sample 2" onclick="showPopup(this.src)">
+      <h3>COPILOT MASTERCLASS</h3>
+      <img src="copilot.jpg" alt="Copilot Masterclass" onclick="showPopup(this.src)">
+      <p>Issued by: <br> Skills Nation Pvt. Ltd.</p>
     </div>
     <div class="certificate">
-      <img src="oracleai.jpg" alt="Sample 3" onclick="showPopup(this.src)">
-    </div>
-    <div class="certificate">
-      <img src="images/sample4.jpg" alt="Sample 4" onclick="showPopup(this.src)">
-    </div>
-    <div class="certificate">
-      <img src="images/sample5.jpg" alt="Sample 5" onclick="showPopup(this.src)">
-    </div>
-    <div class="certificate">
-      <img src="images/sample6.jpg" alt="Sample 6" onclick="showPopup(this.src)">
-    </div>
-    <div class="certificate">
-      <img src="images/sample7.jpg" alt="Sample 7" onclick="showPopup(this.src)">
+      <h3>AI FOUNDATIONS</h3>
+      <img src="oracleai.jpg" alt="AI Foundations" onclick="showPopup(this.src)">
+      <p>Issued by: <br> Oracle University</p>
     </div>
   </div>
 
@@ -233,6 +229,5 @@
       }
     }
   </script>
-
 </body>
 </html>
