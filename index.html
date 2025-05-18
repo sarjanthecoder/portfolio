@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>MY Portfolio</title>
   <link rel="icon" href="indexbg.jpg" type="image/png">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('indexbg.jpg');
+      background-image: url('images/indexbg.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -27,14 +27,14 @@
       position: fixed;
       width: 100%;
       top: 0;
-      left: 0;
+      left: 0;  
       z-index: 1000;
     }
 
     header h1 {
       margin: 0;
       font-size: 2rem;
-      color: #000;
+      color: #000000;
     }
 
     nav {
@@ -73,20 +73,6 @@
       top: 80px;
       right: 0;
       z-index: 10;
-      box-shadow: 0 0 20px rgba(0, 177, 216, 0.7);
-      animation: glow 2s infinite ease-in-out;
-    }
-
-    @keyframes glow {
-      0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-      }
-      50% {
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-      }
     }
 
     .download-btn {
@@ -94,7 +80,9 @@
       top: 400px;
       right: 40px;
       background-color: #00b1d8;
-      color: #000;
+      border-color: #fff;
+      border:2px;
+      color: #000000;
       padding: 12px 20px;
       font-size: 1rem;
       text-decoration: none;
@@ -102,24 +90,43 @@
       transition: background-color 0.3s ease;
       z-index: 20;
     }
+    #profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 177, 216, 0.7);
+  animation: glow 2s infinite ease-in-out;
+}
 
-    .download-btn:hover {
-      background-color: #008bb5;
-      color: #fff;
-    }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.905);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.905);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.905);
+  }
+}
 
-    footer {
-      background-color: #000;
-      color: white;
-      padding: 7px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-    }
 
+     footer {
+  background-color: #000000;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  position: fixed; /* Ensures the footer stays at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Spans the full width of the page */
+  z-index: 10; /* Makes sure it is above other elements */
+}
     #next-button {
       position: fixed;
       bottom: 80px;
@@ -244,7 +251,8 @@
       <a href="education.html">Education</a>
       <a href="certificate.html">Certifications</a>
       <a href="project.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="contactt.html">Contact</a>
+      <a href="#">.......</a>
     </nav>
   </header>
 
